@@ -14,20 +14,22 @@ NotifyIsland将在启动后监听设置的接口（默认为`*:1379`），在其
 
 通过请求`/api/notify`接口，可以触发ClassIsland提醒。
 
-（示例：发送一个标题为“提醒标题”持续3秒，内容为“提醒内容”持续15秒的提醒）
+（示例：发送一个标题为“提醒标题”持续3秒，内容为“提醒内容”持续15秒的提醒，并自定义提醒语音内容）
+
+**自定义语音提醒内容可以省略，省略后将使用显示文本。**
 
 ```
 POST /api/notify HTTP/1.1
-Accept: application/json
 Authorization: Bearer 1145141919
 Content-Type: application/json
-Content-Length: 114
 
 {
     "title": "提醒标题",
     "title_duration": 3,
+    "title_voice": "这是语音播放的提醒标题",
     "content": "提醒内容"
-    "content_duration": 15
+    "content_duration": 15,
+    "content_voice": "这是语音播放的提醒内容：哼哼哼啊啊啊啊啊"
 }
 ```
 
