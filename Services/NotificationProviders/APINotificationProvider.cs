@@ -78,7 +78,9 @@ public class APINotificationProvider : INotificationProvider, IHostedService
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
             },
-            OverlayDuration = TimeSpan.FromSeconds(e.notification.content_duration)
+            OverlayDuration = TimeSpan.FromSeconds(e.notification.content_duration),
+            MaskSpeechContent = e.notification.title_voice ?? e.notification.title,
+            OverlaySpeechContent = e.notification.content_voice ?? e.notification.content
         });
     }
 }

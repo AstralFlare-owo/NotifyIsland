@@ -11,6 +11,8 @@ public class Notification
     public int title_duration { get; set; }
     public string content { get; set; }
     public int content_duration { get; set; }
+    public string title_voice { get; set; }
+    public string content_voice  { get; set; }
 }
 
 public class NotificationReceivedEventArgs : EventArgs
