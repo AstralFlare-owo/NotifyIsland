@@ -8,4 +8,4 @@ apiVersion: 1.6.0.0
 author: tuanzi_awa
 repoOwner: TuanZiGit
 repoName: NotifyIsland
-assetsRoot: master/
+assetsRoot: master
