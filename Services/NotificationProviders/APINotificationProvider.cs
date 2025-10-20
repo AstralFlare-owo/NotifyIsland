@@ -80,7 +80,13 @@ public class APINotificationProvider : INotificationProvider, IHostedService
             },
             OverlayDuration = TimeSpan.FromSeconds(e.notification.content_duration),
             MaskSpeechContent = e.notification.title_voice ?? e.notification.title,
-            OverlaySpeechContent = e.notification.content_voice ?? e.notification.content
+            OverlaySpeechContent = e.notification.content_voice ?? e.notification.content,
+            RequestNotificationSettings = new ClassIsland.Shared.Models.Notification.NotificationSettings()
+            {
+                IsSettingsEnabled = true,
+                IsNotificationSoundEnabled = e.notification.sound_enabled,
+                IsNotificationEffectEnabled = e.notification.effect_enabled
+            }
         });
     }
 }

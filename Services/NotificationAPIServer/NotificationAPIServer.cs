@@ -13,6 +13,8 @@ public class Notification
     public int content_duration { get; set; }
     public string title_voice { get; set; }
     public string content_voice  { get; set; }
+    public bool sound_enabled { get; set; }
+    public bool effect_enabled { get; set; }
 }
 
 public class NotificationReceivedEventArgs : EventArgs
