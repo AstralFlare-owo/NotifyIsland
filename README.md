@@ -27,9 +27,11 @@ Content-Type: application/json
     "title": "提醒标题",
     "title_duration": 3,
     "title_voice": "这是语音播放的提醒标题",
-    "content": "提醒内容"
+    "content": "提醒内容",
     "content_duration": 15,
-    "content_voice": "这是语音播放的提醒内容：哼哼哼啊啊啊啊啊"
+    "content_voice": "这是语音播放的提醒内容：哼哼哼啊啊啊啊啊",
+    "effect_enabled": true,
+    "sound_enabled": true
 }
 ```
 
